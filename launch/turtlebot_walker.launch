@@ -17,4 +17,13 @@
 	launch-prefix="gnome-terminal --command"
     />
 
+    <node
+        if="$(arg enableBag)
+        pkg="rosbag"
+        name="record"
+        type="record" 
+        args="--duration=20 --all --output-name=$(find turtlebot_roomba)/results/rosbagRecorded.bag -x /camera/(.*)"
+        " 
+     />
+
 </launch>
