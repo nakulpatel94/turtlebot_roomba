@@ -50,27 +50,33 @@
 #define INCLUDE_WALKER_H_
 
 #include "ros/ros.h"
-#include "sensor_msgs/LaserScan.h"
 #include "geometry_msgs/Twist.h"
+#include "sensor_msgs/LaserScan.h"
+
 
 /**
- * @brief      Class for Guidance.
+ * @brief Walker Class.
  */
 class Walker {
  private:
-
-  
-  geometry_msgs::Twist msg;
+  /// variable for storing velocities
+  geometry_msgs::Twist commandVel;
   /// node handler
   ros::NodeHandle nh;
   /// publish velocities
   ros::Publisher pubVel;
-  /// subscribe the velocity topic
-  ros::Subscriber subVel;
+  /// subscribe to laserScan topic
+  ros::Subscriber laserData;
+  
+  /**
+   * to check if obstacle present,
+   * default is false, set to true if obstacle detected
+   */
+  bool obstacle = false;
 
  public:
   /**
-   * @brief constructor for walker
+   * @brief constructor for walker object
    * @param None
    * @return None
    */
@@ -88,6 +94,13 @@ class Walker {
    * @return None
    */
   void walk();
+
+  /**
+   * @brief callback function for LaserScan
+   * @param scan laser data published as sensor_msgs/LaserScan message
+   * @return None
+   */
+  void laserCallback(const sensor_msgs::LaserScan::ConstPtr& commandVel);
 };
 
 #endif  // INCLUDE_WALKER_HPP_

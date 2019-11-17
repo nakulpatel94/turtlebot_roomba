@@ -57,9 +57,12 @@
  *  @return 0
  */
 int main(int argc, char* argv[]) {
-  /// Initialize the ros node
+  /// Initializing the node
   ros::init(argc, argv, "turtlebot_roomba");
+
+  /// Creating object of Walker class
   Walker walker;
+
   /// Call the walker behaviour
   walker.walk();
   return 0;
