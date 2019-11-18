@@ -67,7 +67,7 @@ class Walker {
   ros::Publisher pubVel;
   /// subscribe to laserScan topic
   ros::Subscriber laserData;
-  
+
   /**
    * to check if obstacle present,
    * default is false, set to true if obstacle detected
