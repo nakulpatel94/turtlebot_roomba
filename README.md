@@ -161,3 +161,9 @@ topics:      /clock                                            1993 msgs    : ro
              /tf_static                                           1 msg     : tf2_msgs/TFMessage
 ```
 
+
+Also, we can see the topic for velocity specifically:
+```
+rostopic echo /mobile_base/commands/velocity
+
+```
