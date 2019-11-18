@@ -23,7 +23,7 @@ For this project, you require following dependencies:
 - catkin
 - Turtlebot packages
 
-ROS can be installed from the http://wiki.ros.org site. Click on following link [here](http://wiki.ros.org/kinetic/Installation) to navigate to the installation guide for ROS.
+ROS can be installed from the https://wiki.ros.org site. Click on following link [here](https://wiki.ros.org/kinetic/Installation) to navigate to the installation guide for ROS.
 
 To install Turtlebot packages, execute following command in terminal:
 ```
@@ -167,3 +167,12 @@ Also, we can see the topic for velocity specifically:
 rostopic echo /mobile_base/commands/velocity
 
 ```
+
+
+## References:
+
+- https://wiki.ros.org/
+- https://answers.ros.org/question/317168/how-can-i-use-the-data-from-the-laserscanmsg-inside-the-callback-function/
+
+
+
