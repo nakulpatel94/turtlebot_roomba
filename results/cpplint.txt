@@ -1,0 +1,13 @@
+
+Output:
+
+Done processing ./src/main.cpp
+Done processing ./src/walker.cpp
+./include/walker.hpp:49:  #ifndef header guard has wrong style, please use: DESKTOP_GITHUB_NAKULPATEL94_TURTLEBOT_ROOMBA_INCLUDE_WALKER_HPP_  [build/header_guard] [5]
+./include/walker.hpp:106:  #endif line should be "#endif  // DESKTOP_GITHUB_NAKULPATEL94_TURTLEBOT_ROOMBA_INCLUDE_WALKER_HPP_"  [build/header_guard] [5]
+Done processing ./include/walker.hpp
+Total errors found: 2
+
+
+
+

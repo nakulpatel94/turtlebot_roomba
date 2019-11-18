@@ -1,0 +1,28 @@
+<launch>
+
+    <include 
+        file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+    </include>
+
+    <arg 
+        name = "enableBag"
+        default = "false"
+    />
+ 
+    <node
+	pkg="turtlebot_roomba"
+	name="turtlebot_roomba"
+	type="turtlebot_roomba"
+	output="screen"
+	launch-prefix="gnome-terminal --command"
+    />
+
+    <node
+        if="$(arg enableBag)"
+        pkg="rosbag"
+        name="record"
+        type="record" 
+        args="--duration=20 --all --output-name=$(find turtlebot_roomba)/results/rosbagRecorded.bag -x /camera/(.*)" 
+     />
+
+</launch>
