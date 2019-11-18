@@ -46,8 +46,8 @@
  * achieve walking behaviour for Turtlebot.
  */
 
-#ifndef INCLUDE_WALKER_H_
-#define INCLUDE_WALKER_H_
+#ifndef INCLUDE_WALKER_HPP_
+#define INCLUDE_WALKER_HPP_
 
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
