@@ -56,9 +56,9 @@
  *
  */
 void Walker::laserCallback(const sensor_msgs::LaserScan::ConstPtr& commandVel) {
-  for (int i = 0; i < commandVel->ranges.size(); ++i) {
+  for (auto scan: commandVel->ranges) {
     /// Check if obstacle is present within distance specified
-    if (commandVel->ranges[i] < 1.0) {
+    if (scan < 1.0) {
       obstacle = true;
       return;
     }
