@@ -105,7 +105,7 @@ rosbag play rosbagRecorded.bag
 
 To verify what all topics have been recorded using rosbag, simply execute following command in terminal:
 
-# Note: Run the command from results subdirectory
+Note: Run the command from results subdirectory
 
 ```
 rosbag info rosbagRecorded.bag
