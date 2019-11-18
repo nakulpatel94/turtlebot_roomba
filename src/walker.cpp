@@ -34,7 +34,7 @@
  *
  * @author Nakul Patel
  *
- * @brief main program to call the walker node
+ * @brief program to implement the walker functionality
  *
  * @version 1
  *
